@@ -1,9 +1,8 @@
 import { NavLink } from "react-router-dom";
-import { useMediaQuery } from 'react-responsive'
 
 export default function ({ visible = "visible"}) {
     return (
-        <nav className={`z-20 rounded-full ${visible} flex right-0 bg-yellow-300 w-max mt-6`}>
+        <nav className={`z-50 rounded-full ${visible} flex right-0 bg-yellow-300 w-max mt-6`}>
             <NavLink to={'/'} className="py-2">
                 <i className="rounded-full fi px-4 py-2 fi-rr-home duration-300	 hover:bg-yellow-100"></i>
             </NavLink>

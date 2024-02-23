@@ -1,10 +1,10 @@
 import { NavLink } from "react-router-dom"
 
-export default function () {
+export default function ({mobile}) {
     return (
-        <aside className='mt-auto bg-white h-44 w-full flex xl:flex-col  xl:w-1/5 xl:h-screen cursor-default shadow-2xl shadow-gray-500 z-10'>
-            <img src="img/user.png" className="bg-white h-36 xl:h-2/6 h-full object-cover xl:object-contain" alt="" />
-            <div className="xl:h-2/3 w-full flex xl:flex-col items-center justify-around xl:justify-center text-center font-sand xl:text-xl 2xl:text-3xl bg-yellow-300 font-semibold">
+        <aside className={`${mobile} mt-auto bg-white h-44 w-full flex lg:flex-col  lg:w-1/5 lg:h-screen cursor-default shadow-2xl shadow-gray-500 z-10`}>
+            <img src="img/user.png" className="bg-white h-36 lg:h-2/6 h-full object-cover xl:object-contain" alt="" />
+            <div className="lg:h-2/3 w-full flex lg:flex-col items-center justify-around lg:justify-center text-center font-sand xl:text-xl 2xl:text-3xl bg-yellow-300 font-semibold">
                 <NavLink to={'/'} className={({ isActive}) =>
                     isActive ? "text-white" : "hover:text-white duration-300"
                 }>
