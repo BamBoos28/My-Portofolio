@@ -24,7 +24,7 @@ export default function ({ navbar, sidebar }) {
                         <div className='w-1/2 text-sm'>
                             <div className='flex justify-between 2xl:text-xl mb-2 gap-3'>
                                 <h5>Operator Mesin CNC Laser | PT Dua Kelinci</h5>
-                                <h5>2021 - Now</h5>
+                                <h5>2021 - 2024</h5>
                             </div>
                             <div className='md:overflow-x-scroll md:h-72 xl:h-56 2xl:overflow-visible'>
                                 <li className="my-1 marker:text-yellow-300">Menangani pengoperasian mesin CNC Laser untuk memotong berbagai bahan sesuai dengan
