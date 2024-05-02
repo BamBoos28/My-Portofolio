@@ -50,6 +50,15 @@ export default function ({ navbar, sidebar }) {
                             </ul>
                         </SwiperSlide>
                         <SwiperSlide>
+                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/My-Portofolio" target="_blank">WEB STORE</a></h1>
+                            <ul>
+                                <li className="py-3 border-b-2 border-gray-300 text-2xl">React.js</li>
+                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Tailwind CSS</li>
+                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Swiper.js</li>
+                                <li className="py-3 border-b-2 border-gray-300 text-2xl">daisyUI</li>
+                            </ul>
+                        </SwiperSlide>
+                        <SwiperSlide>
                             <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/api-belajar-hapi" target="_blank">REST API</a></h1>
                             <ul>
                                 <li className="py-3 border-b-2 border-gray-300 text-2xl">Node.js</li>
