@@ -4,11 +4,13 @@ import Header from "../comp/header"
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
+import { dataProject } from './project.js'
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function ({ navbar, sidebar }) {
+    console.log(dataProject)
     return (
         <div className='flex lg:flex-row flex-col-reverse h-screen'>
             <Sidebar mobile={sidebar} />
@@ -30,7 +32,21 @@ export default function ({ navbar, sidebar }) {
                         modules={[Pagination]}
                         className="mySwiper"
                     >
-                        <SwiperSlide>
+                        {dataProject.map((data , index) => {
+                            return (
+                                <SwiperSlide key={index}>
+                                <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href={data.link} target="_blank">{data.nama}</a></h1>
+                                <ul>
+                                    {data.frameworks.map((framename, index) => {
+                                        return (
+                                            <li key={index} className="py-3 border-b-2 border-gray-300 text-2xl">{framename}</li>
+                                        )
+                                    })}
+                                </ul>
+                            </SwiperSlide>
+                            )
+                        })}
+                        {/* <SwiperSlide>
                             <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/Chatapp" target="_blank">CHAT APP</a></h1>
                             <ul>
                                 <li className="py-3 border-b-2 border-gray-300 text-2xl">Node.js</li>
@@ -40,44 +56,7 @@ export default function ({ navbar, sidebar }) {
                                 <li className="py-3 border-b-2 border-gray-300 text-2xl">React.js</li>
                                 <li className="py-3 border-b-2 border-gray-300 text-2xl">Tailwind CSS</li>
                             </ul>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/My-Portofolio" target="_blank">PORTOFOLIO</a></h1>
-                            <ul>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">React.js</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Tailwind CSS</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Swiper.js</li>
-                            </ul>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://web-store-setiajaya.vercel.app/" target="_blank">WEB STORE</a></h1>
-                            <ul>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">React.js</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Tailwind CSS</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Swiper.js</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">daisyUI</li>
-                            </ul>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/api-belajar-hapi" target="_blank">REST API</a></h1>
-                            <ul>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Node.js</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Hapi.js</li>
-                            </ul>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/api-belajar-express" target="_blank">REST API</a></h1>
-                            <ul>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Node.js</li>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Express.js</li>
-                            </ul>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                            <h1 className="text-6xl font-hans py-16 border-b-4 border-yellow-300"><a href="https://github.com/WanAziz/Restoran_menu" target="_blank">RESTAURANT MENU</a></h1>
-                            <ul>
-                                <li className="py-3 border-b-2 border-gray-300 text-2xl">Java</li>
-                            </ul>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                 </div>
                 <div className='flex justify-center mt-auto'>
